@@ -11,30 +11,16 @@ int main()
 	*/
 
 	int a[6];
-	int x;
 
 	for (int i = 0; i < 6; i++)
 	{
-		cin >> x;
-		a[i] = x;
+		a[i] = p.inputNumbers();
 	}
 	for (int i = 0; i < 6; i++)
 	{
-		for (int x = 0; x < 6; x++)
-		{
-			if((i != x && a[i] == a[x]) || a[i] < 1 || a[i] > 46 || a[i] == NULL)
-			{
-				cout << "incorrect info" << endl;
-				i = 6;
-				x = 6;
-				break;
-			}
-			else
-			{
-				cout << p.someMethod(a[x]) << endl;
-				assert(p.someMethod(a[x]) == 0);
-			}
-		}
+		assert(p.checkNumbers(a,i) == 0);		
+		assert(p.checkRange(a, i) == 0);
+		assert(p.checkRepeatNums(a, i) == 0);
 	}
 //	assert(p.someMethod(a) == 1);
 	cin.get();
