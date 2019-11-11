@@ -15,9 +15,9 @@ int Production::inputNumbers()
 	return x;
 }
 
-int Production::checkNumbers(int a[], int &i)
+int Production::checkNumbers(GameObject a[], int &i)
 {
-	if (a[i] == NULL)
+	if (a[i].GetX() == NULL)
 	{
 		cout << "incorrect info" << endl;
 		i = 6;
@@ -25,14 +25,14 @@ int Production::checkNumbers(int a[], int &i)
 	}
 	else
 	{
-		cout << someMethod(a[i]) << endl;
-		return someMethod(a[i]);
+		cout << someMethod(a[i].GetX()) << endl;
+		return someMethod(a[i].GetX());
 	}
 }
 
-int Production::checkRange(int a[], int &i)
+int Production::checkRange(GameObject a[], int &i)
 {
-	if ( a[i] < 1 || a[i] > 46 )
+	if ( a[i].GetX() < 1 || a[i].GetX() > 46 )
 	{
 		cout << "incorrect info" << endl;
 		i = 6;
@@ -40,16 +40,16 @@ int Production::checkRange(int a[], int &i)
 	}
 	else
 	{
-		cout << someMethod(a[i]) << endl;
-		return someMethod(a[i]);
+		cout << someMethod(a[i].GetX()) << endl;
+		return someMethod(a[i].GetX());
 	}
 }
 
-int Production::checkRepeatNums(int a[], int &i)
+int Production::checkRepeatNums(GameObject a[], int &i)
 {
 	for (int x = 0; x < 6; x++)
 	{
-		if (i != x && a[i] == a[x])
+		if (i != x && a[i].GetX() == a[x].GetX())
 		{
 			cout << "incorrect info" << endl;
 			i = 6;
@@ -58,8 +58,8 @@ int Production::checkRepeatNums(int a[], int &i)
 		}
 		else
 		{
-			cout << someMethod(a[x]) << endl;
-			return someMethod(a[i]);
+			cout << someMethod(a[x].GetX()) << endl;
+			return someMethod(a[i].GetX());
 		}
 	}
 }

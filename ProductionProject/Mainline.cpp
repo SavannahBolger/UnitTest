@@ -1,8 +1,10 @@
 #include "Production.h"
+#include "GameObject.h"
 #include <iostream>
 #include <assert.h>
 
 using namespace std;
+GameObject a[6];
 
 int main()
 {
@@ -10,11 +12,10 @@ int main()
 	/*p.someMethod(10);
 	*/
 
-	int a[6];
 
 	for (int i = 0; i < 6; i++)
 	{
-		a[i] = p.inputNumbers();
+		a[i].SetX(p.inputNumbers());
 	}
 	for (int i = 0; i < 6; i++)
 	{
