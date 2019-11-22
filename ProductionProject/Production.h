@@ -7,4 +7,7 @@ public:
 	int checkNumbers(GameObject a[], int &i);
 	int checkRange(GameObject a[], int &i);
 	int checkRepeatNums(GameObject a[], int &i);
+	int checkNumbers(int a[], int& i);
+	int checkRange(int a[], int& i);
+	int checkRepeatNums(int a[], int& i);
 };

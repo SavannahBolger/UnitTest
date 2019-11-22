@@ -12,7 +12,6 @@ int main()
 	/*p.someMethod(10);
 	*/
 
-
 	for (int i = 0; i < 6; i++)
 	{
 		a[i].SetX(p.inputNumbers());

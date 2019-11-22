@@ -10,15 +10,11 @@ using namespace std;
 int main()
 {
 	Production p;
-	GameObject a[6];
+	int a[] = { 1,2,3,4,5,6,7 };
 
-	for (int i = 0; i < 6; i++)
+	for (int i = 0; i < sizeof(a); i++)
 	{
-		a[i].SetX(p.inputNumbers());
-	}
-	for (int i = 0; i < 6; i++)
-	{
-		cout << p.someMethod(a[i].GetX()) << endl;
+		cout << p.someMethod(a[i]) << endl;
 		assert(p.checkNumbers(a, i) == 0);
 		assert(p.checkRange(a, i) == 0);
 		assert(p.checkRepeatNums(a, i) == 0);
